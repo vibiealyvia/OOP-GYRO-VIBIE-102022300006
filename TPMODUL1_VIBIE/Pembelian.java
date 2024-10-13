@@ -1,4 +1,4 @@
-package TPMODUL1_NAWFALDO;
+package TPMODUL1_VIBIE;
 
 import java.util.ArrayList;
 import java.util.Scanner;
