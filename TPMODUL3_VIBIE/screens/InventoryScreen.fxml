@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InventoryController">
+    <children>
+        <ScrollPane>
+            <content>
+                <GridPane>
+                    <TableView fx:id="albumTableData">
+                        <columns>
+                            <TableColumn fx:id="albumNameColumn" text="album" />
+                            <TableColumn fx:id="artistColumn" text="artist" />
+                            <TableColumn fx:id="availableColumn" text="available" />
+                            <TableColumn fx:id="totalColumn" text="total" />
+                        </columns>
+                    </TableView>
+                    <GridPane GridPane.columnIndex="1">
+                        <Label text="nama album"/>
+                        <TextField fx:id="tfAlbumName" promptText="..." GridPane.columnIndex="1" />
+                        <Label text="artist" GridPane.rowIndex="1"/>
+                        <TextField fx:id="tfArtist" promptText="..." GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                        <Label text="total" GridPane.rowIndex="2"/>
+                        <TextField fx:id="tfTotal" promptText="..." GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                        <Label text="rented" GridPane.rowIndex="3"/>
+                        <TextField fx:id="tfRented" promptText="..." GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#AddFunction" text="add" GridPane.rowIndex="4">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#EditFunction" text="edit" GridPane.rowIndex="5">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#DeleteFunction" text="delete" GridPane.rowIndex="6">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                         <Button mnemonicParsing="false" onAction="#RentSelectionFunction" text="rent selection" GridPane.rowIndex="7">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </GridPane>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
